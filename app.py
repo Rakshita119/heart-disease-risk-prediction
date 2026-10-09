@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 import joblib
 import base64
+# Load the trained Machine Learning model
+model = joblib.load("heart_disease_model.pkl")
+
 # Load the learned Q-table
 q_table = np.load("q_table.npy")
 
