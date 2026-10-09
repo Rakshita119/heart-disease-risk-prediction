@@ -2,6 +2,25 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import base64
+def set_background(image_path):
+    with open(image_path, "rb") as image_file:
+        encoded = base64.b64encode(image_file.read()).decode()
+
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/png;base64,{encoded}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    set_background("hospital.png")
 # Load the trained Random Forest model
 model = joblib.load("heart_disease_model.pkl")
 
