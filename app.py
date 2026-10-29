@@ -53,6 +53,25 @@ def set_background(image_path):
         [data-testid="stHeader"] {{
             background: rgba(255, 255, 255, 0.15);
         }}
+        /* Make all text dark and readable */
+.stApp p,
+.stApp label,
+.stApp span,
+.stApp li {
+    color: #17202A !important;
+}}
+
+/* Main headings */
+.stApp h1,
+.stApp h2,
+.stApp h3 {
+    color: #102A43 !important;
+}}
+
+/* Information message */
+.stAlert p {
+    color: #17202A !important;
+}}
         </style>
         """,
         unsafe_allow_html=True
